@@ -116,7 +116,7 @@ Building the User-Mode Modules
 
 Clone the repository
 
-git clone https://github.com/your-username/stuxnet-analysis.git
+git clone https://github.com/Sadpainy/Stuxnet.git
 cd stuxnet-analysis
 
 Build the main dropper
