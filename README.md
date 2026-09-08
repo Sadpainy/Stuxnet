@@ -119,7 +119,7 @@ Building the User-Mode Modules
 
 ```bash
 git clone https://github.com/Sadpainy/Stuxnet.git
-cd stuxnet-analysis
+cd Stuxnet
 ```
 
 **Build the main dropper**
