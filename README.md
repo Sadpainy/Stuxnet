@@ -9,7 +9,7 @@ This repository contains a strictly educational and research-oriented reconstruc
 
 Disclaimer: This code is provided solely for academic study, malware analysis training, and defensive research. It is not intended to be used for any malicious purposes, nor is it a deployable piece of malware. The authors and contributors do not condone illegal or unethical activities.
 
-Table of Contents
+# Table of Contents
 
 Overview
 
@@ -31,7 +31,7 @@ Stuxnet is widely recognized as the first known cyber-weapon designed to cause p
 
 This repository is a reconstructed source code derived from the decompiled binaries. It preserves the original logic and attack vectors while structuring the codebase for readability and analysis.
 
-Key Characteristics
+**Key Characteristics**
 
 Target: Siemens SIMATIC WinCC, Step 7, and S7 PLCs.
 
@@ -91,7 +91,7 @@ Stage 10: Hide Files and Registry
 Stage 11: Load Network Module (MRxNet)
 Stage 12: P2P Propagation
 
-Execution Flow
+**Execution Flow**
 
 1. Environment Reconnaissance: The worm checks for the presence of specific Siemens software (WinCC, Step 7) and specific target PLCs (S7-315, S7-417).
 
@@ -101,11 +101,11 @@ Execution Flow
 
 4. Physical Impact: The PLC executes the manipulated code, causing the connected variable frequency drives (VFDs) to spin at abnormal frequencies (high/low), resulting in mechanical damage.
 
-Build Instructions
+**Build Instructions**
 
 Important: This codebase is designed for static analysis and debugging in a controlled virtual environment. It is not intended for live deployment on any critical infrastructure.
 
-Requirements
+**Requirements**
 
 Build Environment: Microsoft Visual Studio 2019/2022 (Windows) or mingw-w64.
 
@@ -115,20 +115,26 @@ Driver Kit: Windows Driver Kit (WDK) 7600 (if compiling kernel drivers).
 
 Building the User-Mode Modules
 
-Clone the repository
+**Clone the repository**
 
+```bash
 git clone https://github.com/Sadpainy/Stuxnet.git
 cd stuxnet-analysis
+```
 
-Build the main dropper
+**Build the main dropper**
 
+```bash
 cd winsta
 nmake /f Makefile.win
+```
 
-Build the S7 hook library
+**Build the S7 hook library**
 
+```bash
 cd ../s7otbxdx
 cl /LD s7otbxdx.c user32.lib ws2_32.lib
+```
 
 # Usage
 
@@ -140,7 +146,7 @@ Defensive Research: Developing detection signatures for ICS security tools (e.g.
 
 Academic Study: Examining the intersection of cybersecurity and critical infrastructure protection.
 
-Analysis Setup
+**Analysis Setup**
 
 1. Isolate Environment: Use a virtual machine (VMWare/VirtualBox) with Host-Only networking enabled. Disable internet connectivity.
 
@@ -148,9 +154,9 @@ Analysis Setup
 
 3. Monitor Activity: Use Process Monitor (ProcMon), Process Hacker, and Wireshark to observe the behavior.
 
-Legal and License
+# Legal and License
 
-# License
+**License**
 
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
 
@@ -170,12 +176,12 @@ By using this repository, you acknowledge that you are solely responsible for en
 
 This research and reconstruction would not have been possible without the extensive analysis and threat intelligence provided by global cybersecurity vendors.
 
-Symantec (W32.Stuxnet dossier)
+**Symantec (W32.Stuxnet dossier)**
 
-Kaspersky Lab (The Stuxnet saga)
+**Kaspersky Lab (The Stuxnet saga)**
 
-ESET (Stuxnet under the microscope)
+**ESET (Stuxnet under the microscope)**
 
-Amr Thabet and Christian Roggia (research-virus/stuxnet)
+**Amr Thabet and Christian Roggia (research-virus/stuxnet)**
 
 This is an academic reconstruction. Use it to build stronger defenses, not to cause harm.
