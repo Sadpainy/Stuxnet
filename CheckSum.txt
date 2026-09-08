@@ -1,0 +1,278 @@
+Stuxnet File Hashes and Integrity Verification
+
+This document compiles file hashes and verification data for Stuxnet components based on Symantec W32.Stuxnet Dossier, Kaspersky Lab reports, ESET, Antiy, Rising and other public security research. All hashes are sourced from public vendor analysis reports for threat hunting and security research reference.
+
+---
+
+Core DLL Files
+
+Main DLL (Resource Payload)
+
+```
+Filename:      ~WTR4141.tmp / Main DLL (in-memory)
+MD5:           44CF1DD50E8C20A2E00B41919A3AD17B
+SHA256:        f15d2cec4b284fc16d6321b57c6c94de511c72404c9b16727af8438e8a2f2086
+File Size:     517,632 bytes (505 KB)
+Location:      Removable drive root / Injected in memory
+Description:   Core Stuxnet DLL containing all attack logic and resources
+```
+
+USB Loader DLL
+
+```
+Filename:      ~WTR4132.tmp
+Location:      Removable drive root
+Description:   USB propagation component, works with ~WTR4141.tmp
+```
+
+Step 7 Project Infection DLL
+
+```
+Filename:      s7otbxdx.dll
+MD5:           e220528ece0a7b1bcc870f72869237b6
+SHA1:          eb2e85732b29a28d0cf402d6d4c8c5927b3b4a68
+MD5 (var):     8fe376f261b06359e9674a64f72b2654
+SHA1 (var):    728e2f1eabbc3e42aa9370340f303b837d5f9e89
+Location:      %ProgramFiles%\Siemens\Step7\S7BIN\s7otbxdx.dll
+Description:   Malicious Step 7 communication DLL for MITM attack
+```
+
+---
+
+Rootkit Drivers
+
+MRxCls.sys (Primary Rootkit Driver)
+
+```
+Filename:      mrxcls.sys
+MD5:           1B084F7228051B3FE95ABA72D7E39C6D
+SHA256:        817a7f28a0787509c2973cec9f8f34ad79e30b7b08e64c66d88372aa3da86
+File Size:     19,840 bytes (v1) / 26,616 bytes (v2)
+Location:      %SystemRoot%\system32\drivers\mrxcls.sys
+Digital Signature: Realtek Semiconductor Corp.
+Signature Date: 2010-01-25
+Service Name:  MRxCls
+Registry:      HKLM\SYSTEM\CurrentControlSet\Services\MRxCls
+Description:   Primary Rootkit driver for SSDT hooking, file/process/registry hiding
+```
+
+MRxNet.sys (Secondary Rootkit Driver)
+
+```
+Filename:      mrxnet.sys
+MD5:           b834ebeb777ea07fb6aab6bf35cdf07f
+File Size:     17,400 bytes
+Location:      %SystemRoot%\system32\drivers\mrxnet.sys
+Compiled:      2010-01-25
+Digital Signature: Realtek Semiconductor Corp.
+Signature Date: 2010-01-25
+Service Name:  MRxNet
+Registry:      HKLM\SYSTEM\CurrentControlSet\Services\MRxNet
+Description:   Secondary Rootkit driver for hiding .lnk and ~WTR*.tmp files
+```
+
+jmidebs.sys (Variant Rootkit Driver)
+
+```
+Filename:      jmidebs.sys
+File Size:     25,552 bytes
+Compiled:      2010-07-14
+Discovered:    2010-07-17 (ESET)
+Digital Signature: JMicron Technology Corp.
+Description:   MRxCls.sys variant using JMicron certificate, PDB: guava.pdb
+```
+
+---
+
+PNF Configuration & Data Files (Encrypted)
+
+oem7A.PNF (Encrypted Main DLL)
+
+```
+Filename:      oem7A.PNF
+MD5:           1B084F7228051B3FE95ABA72D7E39C6D
+File Size:     498,176 bytes (486.5 KB)
+Location:      %Windir%\inf\oem7A.PNF
+Description:   Encrypted main DLL stored on disk
+```
+
+oem6C.PNF (Log File)
+
+```
+Filename:      oem6C.PNF
+File Size:     323,848 bytes
+Location:      %Windir%\inf\oem6C.PNF
+Description:   Stuxnet log file storing infection activity records
+```
+
+mdmeric3.PNF (90-byte Marker)
+
+```
+Filename:      mdmeric3.PNF
+File Size:     90 bytes
+Location:      %Windir%\inf\mdmeric3.PNF
+Description:   Encrypted 90-byte data marker file
+```
+
+mdmcpq3.PNF (Configuration & Host Info)
+
+```
+Filename:      mdmcpq3.PNF
+File Size:     4,943 bytes
+Location:      %Windir%\inf\mdmcpq3.PNF
+MD5:           0DD2AF5AFE93118073CB656D813435A4
+SHA1:          256AC5228427FCD03FB9EC1871B15FD76E4D0879
+Description:   Configuration data and host information storage
+```
+
+---
+
+Print Spooler Exploit Component
+
+```
+Filename:      winsta.exe
+MD5:           2ca9478488ad609b7761ed95a5c5a93d
+MD5 (var):     6a9b253e1183ce37bd3a3d93ad0e6e58
+MD5 (var):     ceea95c4c63827556b09032a5d2c0d8c
+File Size:     ~42 KB
+Location:      %SystemRoot%\system32\winsta.exe
+Description:   MS10-061 Print Spooler service exploit component
+```
+
+---
+
+P2P & File Sharing Components (Stuxnet 0.5)
+
+```
+agentsb.dll
+Location:      %WinDir%\msagent\agentsb.dll
+Description:   P2P file sharing, Microsoft Agent camouflage
+
+agt0f2e.dll
+Location:      %WinDir%\msagent\intl\agt0f2e.dll
+Description:   Companion intl file
+
+datacprs.dll
+Location:      %System%\dlcache\datacprs.dll
+Description:   Anonymous logon + P2P communication
+
+complnd.dll
+Location:      %System%\complnd.dll
+Description:   P2P RPC update module
+
+perfnws.dll
+Location:      %System%\wbem\perfnws.dll
+Description:   WMI integration + P2P update
+
+netsimp32.dll
+Location:      %System%\netsimp32.dll
+Description:   P2P update communication
+
+compind.dll
+Location:      %System%\compind.dll
+Description:   P2P RPC server/client
+```
+
+---
+
+USB Propagation Files
+
+```
+Copy of Shortcut to.lnk
+Location:      Removable drive root
+Description:   LNK exploit file (CVE-2010-2568)
+
+Copy of Copy of Shortcut to.lnk
+Location:      Removable drive root
+Description:   LNK exploit variant
+
+Copy of Copy of Copy of Shortcut to.lnk
+Location:      Removable drive root
+Description:   LNK exploit variant
+
+Copy of Copy of Copy of Copy of Shortcut to.lnk
+Location:      Removable drive root
+Description:   LNK exploit variant
+
+autorun.inf
+Location:      Removable drive root
+Description:   Dual-purpose file (PE + AutoRun config)
+```
+
+---
+
+Other Files
+
+```
+sysnullevnt.mof
+Location:      %SystemRoot%\system32\wbem\mof\
+Description:   WMI event persistence
+
+winmic.fts
+Location:      %WinDir%\help\winmic.fts
+Description:   Encrypted data storage
+
+*.s7p
+Location:      Step 7 project directories
+Description:   Infected Step 7 project files
+```
+
+---
+
+Registry Persistence Keys
+
+```
+HKLM\SYSTEM\CurrentControlSet\Services\MRxCls
+ImagePath = %System%\drivers\mrxcls.sys
+
+HKLM\SYSTEM\CurrentControlSet\Services\MRxNet
+ImagePath = %System%\drivers\mrxnet.sys
+
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NTVDM TRACE
+19790509 = "1"
+```
+
+---
+
+Resource ID Mapping
+
+```
+Resource 201:  MrxNet.sys driver loader
+Resource 202:  Step 7 project infection DLL
+Resource 203:  WinCC CAB infection file
+Resource 207:  Autorun-enabled Stuxnet version
+Resource 208:  Step 7 replacement DLL (s7otbxdx.dll)
+Resource 209:  Data file (winmic.fts)
+Resource 210:  PE template for process injection
+Resource 221:  MS08-067 SMB exploit
+Resource 222:  MS10-061 Print Spooler exploit
+Resource 240:  LNK exploit template
+Resource 241:  USB loader DLL (~WTR4141.tmp)
+Resource 242:  MRxnet.sys Rootkit driver
+Resource 250:  MS10-073 Win32k.sys local privilege escalation
+```
+
+---
+
+C2 Server Domains
+
+```
+www.mypremierfutbol.com:80      Primary C2 server
+www.todaysfutbol.com:80          Backup C2 server
+www.windowsupdate.com:80         Internet connectivity check
+www.msn.com:80                   Internet connectivity check
+```
+
+---
+
+References
+
+1. Symantec - W32.Stuxnet Dossier v1.4 (February 2011)
+2. Kaspersky Lab - Stuxnet/Duqu: The Evolution of Drivers
+3. Kaspersky Lab - Myrtus and Guava, Episode 1 & 2
+4. Antiy Labs - Trojan/Win32.Stuxnet.e[Dropper] Analysis (August 2010)
+5. Rising - Stuxnet Virus Technical Analysis Report (September 27, 2010)
+6. ESET - Stuxnet Under the Microscope
+7. Trend Micro - STUXNET Analysis
+8. Langner - Stuxnet's Secret Twin
+9. Symantec - Stuxnet 0.5: The Missing Link
