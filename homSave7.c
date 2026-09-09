@@ -1,4 +1,13 @@
-/*
+/* Warning: Missing critical capabilities:
+ 
+1. No trigger‑logic for DLL‑preloading hijacking: There is no code to monitor Step‑7 application events and fire the DLL‑hijack when a  .s7p  project file gets opened. The module can place a malicious DLL on disk but cannot force Step‑7 to load and execute it.
+​
+2. No automated full‑disk scanning logic: Cannot automatically traverse the filesystem to discover existing Siemens Step‑7 project folders. It must be invoked by external higher‑level‑orchestration code with explicit project‑path input.
+​
+3. No upstream‑calling‑chain integration: Stand‑alone utility library with no upper‑level invocation glue‑code. It depends entirely on other external modules to feed payload‑buffers and drive its workflow.
+​
+4. No logic for post‑infection state‑tracking, cleanup or rollback of planted artefacts
+
  * dropper/8. hOmSave7.c
  * Stuxnet hOmSave7 - Step 7 Project DLL Preloading Infection Module
  *
