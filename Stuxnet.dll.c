@@ -1,3 +1,6 @@
+/*This is a single aggregated file combined from multiple separate modules.
+No complete working malicious binary can be built from this source code.*/
+
 S7otbxdx.dll
 #define _WIN32_WINNT 0x0501
 #define WINVER 0x0501
