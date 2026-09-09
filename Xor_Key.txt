@@ -1,0 +1,2 @@
+,C500C8C98D,359F4C7857,878288E358;
+//Comment: This is (exclusive OR) (xor) which is a way of encrypting / shifting bytes and bits.
