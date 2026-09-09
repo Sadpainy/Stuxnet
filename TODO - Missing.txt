@@ -1,0 +1,146 @@
+Missing‑Functionality Summary for Stuxnet Reconstruction
+ 
+Reconstruction artifacts provide structural / architectural reference only. No complete working malicious binary can be built from this repository source code.
+ 
+complnd.dll.c (Primary P2P‑RPC master component)
+ 
+Implemented:
+‑ Global / peer table data structures with binary RVA annotations
+‑ Module initialization & cleanup lifecycle
+‑ 445‑port TCP / UDP network skeleton
+‑ Complete RPC function prototype shells
+‑ DllMain and full export table definitions
+ 
+Missing:
+‑ All 9 RPC business handler bodies are stubs; no real execution logic
+‑ Original Microsoft MIDL / NDR RPC implementation replaced with raw named‑pipe byte I/O
+‑ Peer‑table aging, offline‑peer eviction and IP‑deduplication logic
+‑ Payload fragmentation, reassembly and original payload encryption routines
+‑ Local update‑installation logic after receiving newer payload from remote peer
+‑ Network‑error handling, retry and timeout logic
+ 
+agentsb.dll.c (Backup P2P‑agent)
+ 
+Implemented:
+‑ Context & peer‑entry structures
+‑ Network socket / thread skeleton
+‑ Registry modification for  restrictanonymous 
+‑ DllMain and export table
+ 
+Missing:
+‑ Entire RPC service implementation removed (no RPC function shells remain)
+‑ Version‑comparison and update workflow
+‑ Peer‑table aging, deduplication, dwLatency field usage
+‑ RPC‑request forwarding logic to master complnd.dll
+‑ Real malicious payload binary; only zero‑byte placeholder file creation
+ 
+datacprs.dll.c (Backup P2P‑agent)
+ 
+Implemented:
+‑ Context & peer‑entry structures
+‑ Network socket / thread skeleton
+‑ Registry modification for  restrictanonymous 
+‑ DllMain and export table
+ 
+Missing:
+‑ Entire RPC service implementation removed
+‑ Version‑comparison and update workflow
+‑ Peer‑table aging, deduplication, dwLatency field usage
+‑ RPC‑request forwarding logic to master complnd.dll
+‑ Real malicious payload binary; only zero‑byte placeholder file creation
+ 
+netsimp32.dll.c (Backup P2P‑agent, marked speculation)
+ 
+Implemented:
+‑ Context & peer‑entry structures
+‑ Network socket / thread skeleton
+‑ Registry modification for  restrictanonymous 
+‑ DllMain and export table
+‑ Source‑file header warning:  Warning: This is just speculation 
+ 
+Missing:
+‑ Entire RPC service implementation removed
+‑ Version‑comparison and update workflow
+‑ Peer‑table aging, deduplication, dwLatency field usage
+‑ RPC‑request forwarding logic to master complnd.dll
+‑ Real malicious payload binary; only zero‑byte placeholder file creation
+‑ Parts of structure layout are derived from public reports without full binary confirmation
+ 
+perfnws.dll.c (Backup P2P‑agent)
+ 
+Implemented:
+‑ Context & peer‑entry structures
+‑ Network socket / thread skeleton
+‑ Registry modification for  restrictanonymous 
+‑ DllMain and export table
+ 
+Missing:
+‑ Entire RPC service implementation removed
+‑ Version‑comparison and update workflow
+‑ Peer‑table aging, deduplication, dwLatency field usage
+‑ RPC‑request forwarding logic to master complnd.dll
+‑ Real malicious payload binary; only zero‑byte placeholder file creation
+ 
+FastIo.c (mrxnet.sys rootkit fragment)
+ 
+Implemented:
+‑ Full Fast‑IO callback function signatures
+‑  FAST_IO_DISPATCH  table allocation, registration and teardown
+‑ Original pool‑tag  'lnCx' 
+‑ Driver‑object attach / detach boilerplate
+ 
+Missing:
+‑ All Fast‑IO callback handlers unconditionally return  FALSE ; no filename filtering, tampering or file‑hiding logic
+‑ IRP hook, device‑stack hooking implementation
+‑ Process hiding, registry‑key hiding logic
+‑ Complete driver loading, device‑object creation and full driver cleanup workflow
+ 
+homSave7.c (Siemens Step‑7 DLL‑preloading infection module)
+ 
+Implemented:
+‑ Thread‑safe context management with critical‑section
+‑  hOmSave7  sub‑folder enumeration
+‑ Write DLL blob to target directory with hidden‑file attribute
+‑ Path‑getter utilities, file / directory existence checks
+ 
+Missing:
+‑ Trigger logic for DLL‑preloading hijacking; no monitoring for Step‑7  .s7p  project‑open events
+‑ Full‑disk scan logic to auto‑discover Step‑7 project directories
+‑ Upper‑level orchestration glue code; relies on external caller to supply payload buffer
+‑ Post‑infection artefact cleanup / rollback logic
+ 
+Xutils.c (MDX payload‑container handler, marked speculation)
+ 
+Implemented:
+‑  XUTILS  directory‑tree create / delete routines
+‑ Raw read / write for  .MDX  /  .DBF  container files
+‑ Thread‑safe context and existence‑check helpers
+ 
+Missing:
+‑ Original MDX payload encryption / decryption algorithms
+‑ PE‑payload parsing, memory‑loading and process‑injection logic
+‑ Upper‑level scheduling logic for when to read / decrypt payload
+‑ Header note: parts of implementation are speculative, based on public threat reports
+ 
+ydbs.c (YDBs symbol‑database parser for Step‑7 projects)
+ 
+Implemented:
+‑ DBF‑file parsing for symbol‑table entries
+‑ Symbol lookup by identifier
+‑ Path‑utility functions with critical‑section protection
+ 
+Missing:
+‑ Database‑tampering / poisoning write logic to create DLL‑hijack prerequisites
+‑ MDX‑index‑file processing (only constant definitions exist)
+‑ Full‑disk Step‑7‑project discovery scanning logic
+‑ No upper‑level invocation glue code
+ 
+Global repository‑wide deficiencies across all source files
+ 
+1. No PLC / centrifugal‑controller manipulation payload code (Stuxnet‑0.5 physical‑damage payload is entirely absent)
+2. No top‑level main orchestration entry‑point; modules are isolated fragments without cross‑component calling logic
+3. No build system (CMake / Visual‑Studio project); missing unified header set, packing‑alignment fixes, export‑ordinal matching
+4. General gaps: uninstall / self‑cleanup workflows, persistent‑logic, comprehensive logging
+5. Backup P2P agents lack RPC‑forwarding logic towards master complnd.dll
+6. Many functions are skeleton‑only; malicious core business logic is either stubbed or completely removed
+7. Source code is for architectural‑study purpose only, not a rebuild of original functional malware binary
