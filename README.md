@@ -1,7 +1,7 @@
 # Stuxnet
 
 ![Build Unstable](https://img.shields.io/badge/build-unstable-yellow?style=plastic)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![License](https://img.shields.io/badge/License-AGPLv3-009999?style=plastic&logo=gnu&logoColor=white&labelColor=555555)
 ![Siemens](https://img.shields.io/badge/Siemens-009999?style=plastic&logo=siemens&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=plastic&logo=linux&logoColor=black)
