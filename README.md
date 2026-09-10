@@ -1,6 +1,6 @@
 # Stuxnet
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
+![Build Unstable](https://img.shields.io/badge/build-unstable-yellow?style=plastic)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20WinCE%20%7C%20SCADA-lightgrey)]()
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
