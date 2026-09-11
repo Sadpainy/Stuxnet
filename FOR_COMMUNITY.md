@@ -8,7 +8,7 @@ Why share it at all? Because readable code is worth something. If you're learnin
 
 As for safety — I don't use my real name. I don't use my home IP. I don't post from a machine tied to my identity. I don't need credit, I don't need a job offer, I don't need anyone to know who I am. The code speaks for itself. If it's useful, use it. If it's not, ignore it.
 
-I'm not here to prove anything to anyone. I'm just here to share what I built.
+**I'm not here to prove anything to anyone. I'm just here to share what I built.**
 
 
 # About the LLM thing
@@ -19,16 +19,16 @@ Why not just leave it as raw, messy decompiler output? Because readable code is 
 
 That's all it was. A tool. The same way I'd use a hex editor or a decompiler. It didn't replace the reverse engineering work — it just made the result easier to look at.
 
-If you don't like that, fair enough. But the code is still the code. The structure is still the structure. The missing pieces are still missing. The LLM didn't change any of that.
+**If you don't like that, fair enough. But the code is still the code. The structure is still the structure. The missing pieces are still missing. The LLM didn't change any of that.**
 
-LLMs can hallucinate. They can fill in gaps that don't exist, make something look more complete than it really is. I'm not going to pretend that risk doesn't exist here.
+**LLMs can hallucinate. They can fill in gaps that don't exist, make something look more complete than it really is. I'm not going to pretend that risk doesn't exist here.**
 
 If some part of this code looks off, or doesn't match what the public reports say, it might be because of that. I tried to catch it, but I can't guarantee I caught everything.
 
 I'm not going to blame the LLM for that. It's a tool. Tools have limits. The responsibility for what's in here is mine.
 
-So use this with your eyes open. Cross-check it against Symantec, ESET, Kaspersky. If something doesn't line up, trust the reports, not my code.
+**So use this with your eyes open. Cross-check it against Symantec, ESET, Kaspersky. If something doesn't line up, trust the reports, not my code.**
 
-I hope this helps someone. That's all I wanted.
+**I hope this helps someone. That's all I wanted.**
 
 Thanks you watching this!
