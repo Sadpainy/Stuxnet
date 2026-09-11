@@ -21,9 +21,6 @@ That's all it was. A tool. The same way I'd use a hex editor or a decompiler. It
 
 If you don't like that, fair enough. But the code is still the code. The structure is still the structure. The missing pieces are still missing. The LLM didn't change any of that.
 
-
-# One more thing about LLMs
-
 LLMs can hallucinate. They can fill in gaps that don't exist, make something look more complete than it really is. I'm not going to pretend that risk doesn't exist here.
 
 If some part of this code looks off, or doesn't match what the public reports say, it might be because of that. I tried to catch it, but I can't guarantee I caught everything.
