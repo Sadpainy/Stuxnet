@@ -14,7 +14,7 @@
  * 
  * Verified: 93 of 109 exports forwarded to s7otbxsx.dll, 16 exports intercepted for PLC communication manipulation,The intercepted exports handle read, write, enumerate of PLC code blocks, Stuxnet modifies data sent to/returned from PLC without operator knowledge, Stuxnet hides malicious code on PLC through these routines, Infection targets S7-315 and S7-417 CPUs,The DLL contains three 64-bit encrypted Step7 code sets, Two code sets target S7-315 controllers, one targets S7-417, Attack sequence modifies frequency: 1410Hz -> 2Hz -> 1064Hz, Normal operating frequency range: 807Hz to 1210Hz, Initial delay of ~13 days before attack, 15-minute infection routine interval. [reference:2]
  * 
- * Also, you can look Stuxnet.dll.c "s7plcmain"
+ * Also, you can look Stuxnet.dll.c "s7plcmain" [reference:2]
  *
  * MAYBE: Exact sub_XXXXXX addresses and byte offsets
  * MAYBE: Precise heap layout constants
