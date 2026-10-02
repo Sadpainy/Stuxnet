@@ -706,9 +706,9 @@ static BOOL HOmSave7_InfectProject(VOID) {
     return TRUE;
 }
 
-/* =====================================================================
+/*
  * PUBLIC API
- * ===================================================================== */
+ */
 
 DWORD HOmSave7_Initialize(VOID) {
     if (g_HOmSave7Ctx.dwMagic == STUXNET_MAGIC) {
