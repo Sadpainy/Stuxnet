@@ -44,7 +44,7 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 
 # Core Components
 
-The repository is organized by the primary modules identified during the analysis of the original malware.
+**The repository is organized by the primary modules identified during the analysis of the original malware.**
 
 - Module: Loader/Dropper
 - Filename: `winsta.exe, ~WTR4141.tmp`
@@ -85,6 +85,8 @@ The repository is organized by the primary modules identified during the analysi
 ~~Module: Payload (Attack)~~
 ~~Filename: s7plcmain~~
 ~~Description: The core logic responsible for the "Frequency Tampering" attack that damages the centrifuges.~~
+
+------
 
 # Technical Architecture
 
