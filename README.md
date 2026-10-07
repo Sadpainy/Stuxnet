@@ -191,6 +191,6 @@ This research and reconstruction would not have been possible without the extens
 
 **Amr Thabet and Christian Roggia (research-virus/stuxnet)**
 
-```Bash
+```rust
 This is an academic reconstruction. Use it to build stronger defenses, not to cause harm.
 ```
