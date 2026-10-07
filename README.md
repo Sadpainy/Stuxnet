@@ -27,10 +27,19 @@ Acknowledgements
 
 # Status
 
-Build: Unstable
-Clean Code: Verified
-Code Quality: Tests Passing
-Coverage: 95% match
+**Build: Unstable**
+
+------
+
+**Clean Code: Verified**
+
+------
+
+**Code Quality: Tests Passing**
+
+------
+
+**Coverage: 95% match**
 
 # Overview
 
