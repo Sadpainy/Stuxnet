@@ -41,7 +41,7 @@ Stuxnet is widely recognized as the first known cyber-weapon designed to cause p
 
 This repository is a **reconstructed** source code derived from the decompiled binaries. **It preserves the original logic and attack vectors while structuring the codebase for readability and analysis.**
 
-**Key Characteristics**
+- **Key Characteristics**
 
 **Target: Siemens SIMATIC WinCC, Step 7, and S7 PLCs.**
 
