@@ -2,6 +2,7 @@
 
 ![Build](https://img.shields.io/badge/Build-unstable-yellow?style=plastic&labelColor=555555)
 ![Tests](https://img.shields.io/badge/Tests-passing-brightgreen?style=plastic&labelColor=555555)
+![Quality Gate](https://img.shields.io/badge/Quality_Gate-Passed-brightgreen?style=plastic&labelColor=555555)
 ![Siemens](https://img.shields.io/badge/Siemens-009999?style=plastic&logo=siemens&logoColor=white)
 ![NSA](https://custom-icon-badges.demolab.com/badge/NSA-6E6E6E?style=plastic&logo=nsa&logoColor=white&labelColor=555555)
 
