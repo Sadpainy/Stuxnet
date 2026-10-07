@@ -182,7 +182,7 @@ This code is intended for:
 
 License
 
-This project is licensed under the **GNU Affero General Public License v3.0, LICENSE.Stuxnet `(Must-Read, Very Important)`, LICENSE.XOR, LICENSE.Detail, Apache License 2.0 and LICENSE.Desktop.** See the LICENSE file for details.
+This project is licensed under the **GNU Affero General Public License v3.0, LICENSE.Stuxnet `(Must-Read, Very Important)`, LICENSE.XOR `(Must-Read, Very Important)`, LICENSE.Detail, Apache License 2.0 and LICENSE.Desktop.** See the LICENSE file for details.
 
 ```python
 No Disclaimer. That's on you to be self-aware.
