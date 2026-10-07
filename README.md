@@ -1,6 +1,6 @@
 # Stuxnet
 
-![NSA](https://custom-icon-badges.demolab.com/badge/NSA-6E6E6E?style=for-the-badge&logo=nsa&logoColor=white&labelColor=555555)
+![NSA](https://custom-icon-badges.demolab.com/badge/NSA-555555?style=plastic&logo=nsa&logoColor=white&labelColor=555555)
 
 This repository contains a strictly educational and research-oriented **reconstruction** of the infamous **Stuxnet** worm. It is the product of countless hours of reverse engineering work conducted by the global security research community on the original binary samples discovered in 2010.
 
