@@ -99,21 +99,21 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 
 # Technical Architecture
 
-The following describes the high-level execution flow of the Stuxnet framework.
+**The following describes the high-level execution flow of the Stuxnet framework.**
 
-Stage 1: Initial Infection Vector (USB/Network)
-Stage 2: Dropper and Escalation
-Stage 3: Check Environment
-Stage 4a: Target Found (Siemens Software) -> Install S7 Hooks
-Stage 4b: Non-target -> Self-Destruct/Idle
-Stage 5: Monitor PLC Writes
-Stage 6: Detect `OB1/OB35` Write -> Inject Payload
-Stage 7: Modify Frequency Output
-Stage 8: Physical Damage to Centrifuges
-Stage 9: Install Rootkit `(MRxCls)`
-Stage 10: Hide Files and Registry
-Stage 11: Load Network Module `(MRxNet)`
-Stage 12: P2P Propagation
+- Stage 1: Initial Infection Vector (USB/Network)
+- Stage 2: Dropper and Escalation
+- Stage 3: Check Environment
+- Stage 4a: Target Found (Siemens Software) -> Install S7 Hooks
+- Stage 4b: Non-target -> Self-Destruct/Idle
+- Stage 5: Monitor PLC Writes
+- Stage 6: Detect `OB1/OB35` Write -> Inject Payload
+- Stage 7: Modify Frequency Output
+- Stage 8: Physical Damage to Centrifuges
+- Stage 9: Install Rootkit `(MRxCls)`
+- Stage 10: Hide Files and Registry
+- Stage 11: Load Network Module `(MRxNet)`
+- Stage 12: P2P Propagation
 
 **Execution Flow**
 
