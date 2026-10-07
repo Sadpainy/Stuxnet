@@ -92,7 +92,7 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 ------
 
 ~~- Module: Payload (Attack)~~
-~~- Filename: s7plcmain~~
+~~- Filename: `s7plcmain`~~
 ~~- Description: The core logic responsible for the "Frequency Tampering" attack that damages the centrifuges.~~
 
 ------
