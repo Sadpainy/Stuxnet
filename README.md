@@ -69,9 +69,9 @@ Module: Rootkit (Network)
 Filename: `mrxnet.sys`
 Description: Filters file system requests to hide malicious files and enables P2P propagation.
 
-Module: Payload (Attack)
+~~Module: Payload (Attack)~~
 Filename: ~~s7plcmain~~
-Description: The core logic responsible for the "Frequency Tampering" attack that damages the centrifuges.
+~~Description: The core logic responsible for the "Frequency Tampering" attack that damages the centrifuges.~~
 
 # Technical Architecture
 
@@ -156,7 +156,7 @@ This code is intended for:
 
 # Legal and License
 
-**License**
+License
 
 This project is licensed under the **GNU Affero General Public License v3.0, LICENSE.Stuxnet `(Must-Read, Very Important)`, LICENSE.XOR, LICENSE.Detail, Apache License 2.0 and LICENSE.Desktop.** See the LICENSE file for details.
 
