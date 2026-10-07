@@ -115,7 +115,7 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 - Stage 11: Load Network Module `(MRxNet)`
 - Stage 12: P2P Propagation
 
-**Execution Flow**
+- **Execution Flow**
 
 1. Environment Reconnaissance: The worm checks for the presence of specific Siemens software (WinCC, Step 7) and specific target PLCs (S7-315, S7-417).
 
@@ -125,11 +125,11 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 
 4. Physical Impact: The PLC executes the manipulated code, causing the connected variable frequency drives (VFDs) to spin at abnormal frequencies (high/low), resulting in mechanical damage.
 
-**Build Instructions**
+- **Build Instructions**
 
 **Important: This codebase is designed for static analysis and debugging in a controlled virtual environment. It is not intended for live deployment on any critical infrastructure.**
 
-**Requirements**
+- **Requirements**
 
 Build Environment: **Microsoft Visual Studio 2019/2022 (Windows) or mingw-w64.**
 
