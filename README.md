@@ -1,6 +1,9 @@
 # Stuxnet
 
 ![NSA](https://custom-icon-badges.demolab.com/badge/NSA-555555?style=plastic&logo=nsa&logoColor=white&labelColor=555555)
+![Mossad](https://custom-icon-badges.demolab.com/badge/Mossad-333333?style=plastic&logo=mossad&logoColor=white&labelColor=333333)
+![CIA](https://custom-icon-badges.demolab.com/badge/CIA-333333?style=plastic&logo=central%20intelligence%20agency&logoColor=white&labelColor=333333)
+![IDF](https://custom-icon-badges.demolab.com/badge/IDF-333333?style=plastic&logo=israel%20defense%20forces&logoColor=white&labelColor=333333)
 ![Siemens](https://img.shields.io/badge/Siemens-6E6E6E?style=plastic&logo=siemens&logoColor=white&labelColor=555555)
 
 This repository contains a strictly educational and research-oriented **reconstruction** of the infamous **Stuxnet** worm. It is the product of countless hours of reverse engineering work conducted by the global security research community on the original binary samples discovered in 2010.
