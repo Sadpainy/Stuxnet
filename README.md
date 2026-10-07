@@ -46,29 +46,41 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 
 The repository is organized by the primary modules identified during the analysis of the original malware.
 
-Module: Loader/Dropper
-Filename: `winsta.exe, ~WTR4141.tmp`
-Description: Entry point responsible for initial infection, privilege escalation, and deployment of other components.
+- Module: Loader/Dropper
+- Filename: `winsta.exe, ~WTR4141.tmp`
+- Description: Entry point responsible for initial infection, privilege escalation, and deployment of other components.
 
-Module: Privilege Escalation
-Filename: `~WTR4132.tmp`
-Description: Exploits the `Win32k.sys` vulnerability to gain system-level privileges.
+------
 
-Module: S7 Hook Library
-Filename: `s7otbxdx.dll`
-Description: Malicious replacement for the original `s7otbxsx.dll`. It intercepts communication between Step 7 and the PLC.
+- Module: Privilege Escalation
+- Filename: `~WTR4132.tmp`
+- Description: Exploits the `Win32k.sys` vulnerability to gain system-level privileges.
 
-Module: Step7 Hook Library
-Filename: `s7aaapix.dll`
-Description: Intercepts AUT (Automation Tool) API calls within the Step 7 engineering environment.
+------
 
-Module: Rootkit (File System)
-Filename: `mrxcls.sys`
-Description: Kernel-mode driver used to hide Stuxnet files, processes, and registry keys via SSDT hooking.
+- Module: S7 Hook Library
+- Filename: `s7otbxdx.dll`
+- Description: Malicious replacement for the original `s7otbxsx.dll`. It intercepts communication between Step 7 and the PLC.
 
-Module: Rootkit (Network)
-Filename: `mrxnet.sys`
-Description: Filters file system requests to hide malicious files and enables P2P propagation.
+------
+
+- Module: Step7 Hook Library
+- Filename: `s7aaapix.dll`
+- Description: Intercepts AUT (Automation Tool) API calls within the Step 7 engineering environment.
+
+------
+
+- Module: Rootkit (File System)
+- Filename: `mrxcls.sys`
+- Description: Kernel-mode driver used to hide Stuxnet files, processes, and registry keys via SSDT hooking.
+
+------
+
+- Module: Rootkit (Network)
+- Filename: `mrxnet.sys`
+- Description: Filters file system requests to hide malicious files and enables P2P propagation.
+
+------
 
 ~~Module: Payload (Attack)~~
 ~~Filename: s7plcmain~~
