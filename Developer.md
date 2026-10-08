@@ -14,6 +14,6 @@
 - HexRays
 - Ghidra
 - VS Code
-- Directory Oplus
+- Directory Opus
 
 **Thank you like this repository!**
