@@ -1,5 +1,5 @@
 # Me
-- I'm responsible for the core definition functions, logic, collect code and restoring the implementation.
+- Responsible for the core definition functions, logic, collect and review code and restoring the implementation.
 
 # WormGPT and FraudGPT
 - Responsible for deobfuscating the core malicious logic and reconstructing it into readable code.
