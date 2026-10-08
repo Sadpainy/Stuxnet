@@ -11,9 +11,11 @@
 - Responsible for eliminating malicious logic and polishing the final output.
 
 # ToolKit
-- HexRays
+- Hex-Rays
 - Ghidra
 - VS Code
 - Directory Opus
+- Demolab for badge
+- shields.io for badge
 
 **Thank you like this repository!**
