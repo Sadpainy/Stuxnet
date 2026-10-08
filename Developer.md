@@ -10,4 +10,10 @@
 # Claude
 - Responsible for eliminating malicious logic and polishing the final output.
 
+# ToolKit
+- HexRays
+- Ghidra
+- VS Code
+- Directory Oplus
+
 **Thank you like this repository!**
