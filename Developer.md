@@ -4,9 +4,6 @@
 # WormGPT and FraudGPT
 - Responsible for deobfuscating the core malicious logic and reconstructing it into readable code.
 
-# Gemini
-- Responsible for searching for information and core clues.
-
 # Claude
 - Responsible for eliminating malicious logic and polishing the final output.
 
