@@ -41,6 +41,12 @@ Warning: This code is provided solely for academic study, malware analysis train
 
 - **Coverage: Excellent**
 
+# New Update
+
+**Added a version that's closer to the original in detail, plus a clean version**. both built entirely from the known clues. The file is named **Reboot.zip** and the password is _Stuxnet_.
+
+_If you don't think the rebuilt version is good..._
+
 # Overview
 
 Stuxnet is widely recognized as the first known cyber-weapon designed to cause physical destruction to industrial control systems (ICS). It specifically targeted Siemens Step 7 software and S7-300/400 PLCs, ultimately manipulating frequency converter drives to damage centrifuge rotors.
