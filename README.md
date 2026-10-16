@@ -43,6 +43,8 @@ Warning: This code is provided solely for academic study, malware analysis train
 
 # New Update
 
+Time: 2026-10-17 06:00
+
 **Added a version that's closer to the original in detail, plus a clean version**. both built entirely from the known clues. The file is named **Reboot.zip** and the password is _Stuxnet_.
 
 _If you don't think the reconstruction version is good..._
