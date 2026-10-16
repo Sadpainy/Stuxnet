@@ -87,9 +87,9 @@ Stealth: Advanced Rootkit capabilities `(MRxCls.sys, MRxNet.sys)` for file, proc
 
 ------
 
-- Module: Step7 Hook Library
-- Filename: `s7aaapix.dll`
-- Description: Intercepts AUT (Automation Tool) API calls within the Step 7 engineering environment.
+~~- Module: Step7 Hook Library~~
+~~- Filename: `s7aaapix.dll`~~
+~~- Description: Intercepts AUT (Automation Tool) API calls within the Step 7 engineering environment.~~
 
 ------
 
