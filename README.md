@@ -186,7 +186,7 @@ This code is intended for:
 
 **Analysis Setup**
 
-1. Isolate Environment: Use a virtual machine (VMWare/VirtualBox) with Host-Only networking enabled. Disable internet connectivity.
+1. Isolate Environment: Use a virtual machine (VMWare/VirtualBox) with _Host-Only_ networking enabled. Disable internet connectivity.
 
 2. Load Modules: Analyze the `.dll` and `.sys` files using tools such as IDA Pro, Ghidra, or x64dbg.
 
