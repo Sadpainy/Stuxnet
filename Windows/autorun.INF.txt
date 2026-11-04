@@ -1,0 +1,7 @@
+[autorun]
+open=.\autorun.inf
+action=Open folder to view files
+shell\open\command=.\autorun.inf
+shell\open\default=1
+shell\explore\command=.\autorun.inf
+useautoplay=0
