@@ -1,5 +1,9 @@
 # Stuxnet
 
+# Premise
+
+Thank you like this repository. Its value lies in freeing people from having to read dull, scattered reports that run to thousands of pages, which consume a huge amount of time and energy. This repository is highly readable; it does not blindly chase the original version but is more oriented toward general readers.
+
 ![NSA](https://custom-icon-badges.demolab.com/badge/NSA-333333?style=plastic&logo=nsa&logoColor=white&labelColor=333333)
 ![Mossad](https://custom-icon-badges.demolab.com/badge/Mossad-333333?style=plastic&logo=mossad&logoColor=white&labelColor=333333)
 ![CIA](https://custom-icon-badges.demolab.com/badge/CIA-333333?style=plastic&logo=central%20intelligence%20agency&logoColor=white&labelColor=333333)
