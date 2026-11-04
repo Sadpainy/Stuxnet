@@ -9,13 +9,15 @@
 
 This repository contains a strictly educational and research-oriented **reconstruction** of the infamous **Stuxnet** worm. It is the product of countless hours of reverse engineering work conducted by the global security research community on the original binary samples discovered in 2010.
 
+**The Code Quality Passing, Coverage Successful, Clean Code Verified. But build is unstable state.**
+
 Warning: This code is provided solely for academic study, malware analysis training, and defensive research. The authors and contributors do not condone illegal or unethical activities.
 
-**_It is not intended to be used for any malicious purposes, nor is it a deployable piece of malware._**
+_It is not intended to be used for any malicious purposes, nor is it a deployable piece of malware._
 
 # Table of Contents
 
-- Status
+~~- Status~~
 
 - Overview
 
@@ -31,15 +33,15 @@ Warning: This code is provided solely for academic study, malware analysis train
 
 - Acknowledgements
 
-# Status
+~~# Status~~
 
-- **Build: Unstable**
+~~- **Build: Unstable**~~
 
-- **Clean Code: Verified**
+~~- **Clean Code: Verified**~~
 
-- **Code Quality: Tests Passing**
+~~- **Code Quality: Tests Passing**~~
 
-- **Coverage: Excellent**
+~~- **Coverage: Excellent**~~
 
 # New Update
 
@@ -171,7 +173,7 @@ nmake /f Makefile.win
 
 ```bash
 cd ../s7otbxdx
-cl /LD s7otbxdx.c user32.lib ws2_32.lib
+cl /LD s7otbxdx.dll.c user32.lib ws2_32.lib
 ```
 
 # Usage
