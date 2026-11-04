@@ -1,6 +1,4 @@
-# Stuxnet
-
-# Premise
+# Repository Premise
 
 Thank you like this repository. Its value lies in freeing people from having to read dull, scattered reports that run to thousands of pages, which consume a huge amount of time and energy. This repository is highly readable; it does not blindly chase the original version but is more oriented toward general readers.
 
