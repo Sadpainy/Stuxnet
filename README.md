@@ -11,7 +11,7 @@ _Thank you like this repository. Its value lies in freeing people from having to
 
 This repository contains a strictly educational and research-oriented **reconstruction** of the infamous **Stuxnet** worm. It is the product of countless hours of reverse engineering work conducted by the global security research community on the original binary samples discovered in 2010.
 
-**The Code Quality Passing, Coverage Successful, Clean Code Verified. But build is unstable state.**
+**The Code Quality Passing, Coverage Successful, Clean Code Verified. But build is unstable stage.**
 
 Warning: This code is provided solely for academic study, malware analysis training, and defensive research. The authors and contributors do not condone illegal or unethical activities.
 
